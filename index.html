@@ -1,88 +1,60 @@
-<!DOCTIPE html>
+<!DOCTYPE html>
 <html>
     <head><title>Calculator Puritate Aur</title></head>
-    <style>
-        input[type=text]{
-        width: 70vw;
-        padding: 12px 20px;
-        margin: 8px 0;
-        box-sizing: border-box;
-        border-style: none none none solid;
-        border-width: 10px;
-        border-color: aqua;
-        background-color: #3cbc8d00;
-        color: rgb(0, 0, 0);
-        font-size: 5vh;
-        }
-        button{
-            border-style: none;
-            background-color: gold;
-        }
-        button:active{
-            background-color: gray;
-        }
-        #buttonContainer{
-            float: right;
-            padding-top: 20vh;
-        }
-        form{
-            display: flex;
-            flex-flow: row wrap;
-        }
-        select{
-            width: 70vw;
-            padding: 12px 20px;
-            margin: 8px 0;
-            box-sizing: border-box;
-            border-style: none none none solid;
-            border-width: 10px;
-            border-color: aqua;
-            background-color: #3cbc8d00;
-            color: rgb(0, 0, 0);
-            font-size: 5vh;
-        }
-        #print{
-            font-size: 5vh;
-            padding-top: 10vh;
-        }
-    </style>
-    <body>
+    <link rel="stylesheet" href="style.css">
+    <body><!-- 
         <form>
-            <label for="gramaj" style='font-size: 5vh;'>Cantitate Aur:</label>
+            <label for="gramaj" style='font-size: 70px;'>Cantitate Aur:</label>
             <input type="text" id="gramaj">
-            <label for="calitate" style='font-size: 5vh;'>Calitate rezultat:</label>
+            <label for="calitate" style='font-size: 70px;'>Calitate rezultat:</label>
             <select id="carate">
                 <option value="18">18 Carate</option>
                 <option value="14">14 Carate</option>
               </select>
           </form>
-          <div id="print">Cantitate aliaj necesara:</div>
+          <div id="print">Cantitate aliaj necesara:</div> -->
+
+<!-- Testing Table instead of FLEX here -->
+
+          <table id="inputVal">
+            <tr>
+              <td>Cantitate Aur(grame):</td>
+              <td><input type="text" id="gramaj"></td>
+              <td><select id="carateInitiale">
+                  <option value="24">24 K</option>
+                <option value="18">18 K</option>
+                <option value="14">14 K</option>
+              </select></td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+              <td>Calitate dorita:</td>
+              <td><select id="carate">
+                <option value="18">18 K</option>
+                <option value="14">14 K</option>
+              </select></td>
+            </tr>
+        </table><br><br><br><br><br><br><br><br>
+    <table id="results">
+            <tr>
+                <td>Cantitate necesara aliaj:</td>
+                <td><div id="print">
+                </div></td>
+            </tr>
+            <tr>
+                <td>Cantitate necesara aur:</td>
+                <td><div id="printAur"></div></td>
+            </tr>
+            <tr>
+                <td>Cantitate finala:</td>
+                <td><div id="printAll"></div></td>
+            </tr>
+          </table>
+
+
     </body>
-    <script>
-        var gramaj, carate, cantitateAliaj, cantitateFinala, print;
 
-        document.getElementById("carate").addEventListener('change', (event) => {
-            gramaj = document.getElementById("gramaj").value;
-            if(event.target.value == 14){
-                cantitateAliaj = (gramaj*100/58.5)-gramaj;
-            }
-            else{
-                cantitateAliaj = (gramaj*100/75)-gramaj;
-            }
-            document.getElementById("print").innerHTML = "Cantitate aliaj necesara: " + (Math.round(cantitateAliaj * 100) / 100).toFixed(2) + "g";
-        });
-
-        document.getElementById("gramaj").addEventListener("input", (event) => {
-            event.preventDefault();
-            gramaj = event.target.value;
-            if(document.getElementById('carate').value == 14){
-                cantitateAliaj = (gramaj*100/58.5)-gramaj;
-            }
-            else{
-                cantitateAliaj = (gramaj*100/75)-gramaj;
-            }
-            document.getElementById("print").innerHTML = "Cantitate aliaj necesara: " + (Math.round(cantitateAliaj * 100) / 100).toFixed(2) + "g";
-        });
-        
-    </script>
+    <script src="script.js"></script>
 </html>

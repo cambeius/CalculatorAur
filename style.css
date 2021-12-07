@@ -1,0 +1,81 @@
+input[type=text]{
+    width: 35vw;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-style: none solid none solid;
+    border-width: 10px;
+    border-color: aqua;
+    background-color: #3cbc8d00;
+    color: rgb(0, 0, 0);
+    font-size: 60px;
+    }
+    button{
+        border-style: none;
+        background-color: gold;
+    }
+    button:active{
+        background-color: gray;
+    }
+    #buttonContainer{
+        float: right;
+        padding-top: 20vh;
+    }
+    form{
+        display: flex;
+        flex-flow: row wrap;
+    }
+    #carate{
+        width: 40vw;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border-style: none solid none solid;
+        border-width: 10px;
+        border-color: aqua;
+        background-color: #3cbc8d00;
+        color: rgb(0, 0, 0);
+        font-size: 60px;
+    }
+    #carateInitiale{
+        width: auto;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border-style: none solid none solid;
+        border-width: 10px;
+        border-color: aqua;
+        background-color: #3cbc8d00;
+        color: rgb(0, 0, 0);
+        font-size: 60px;        
+    }
+    #print{
+        font-size: 60px;
+    }
+
+
+
+
+
+    #inputVal {
+        font-size: 70px;
+        border-collapse: collapse;
+        width: 100%;
+        background-color: rgb(241, 225, 82);
+      }
+      
+      td {
+        border: 0px solid;
+        text-align: left;
+      }
+
+    #results{
+        font-size: 70px;
+        border-collapse: collapse;
+        width: 100%;
+        background-color: rgb(231, 126, 126);
+        border: 1px solid;
+    }
+    #results tr{
+        border: 1px solid;
+    }
